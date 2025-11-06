@@ -1,0 +1,170 @@
+/* GLOBAL STYLES & RESET */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* Use a modern, clean font */
+    font-family: 'Poppins', sans-serif; 
+}
+
+body {
+    /* gradient background - Calming Teal and Light Blue */
+    background: linear-gradient(135deg, #b9f2ff, #20b2aa); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* APP CONTAINER */
+.app-container {
+    background: white;
+    padding: 40px;
+    border-radius: 20px; 
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2); /* darker shadow */
+    width: 100%;
+    max-width: 550px;
+    transition: all 0.5s ease-in-out;
+}
+
+h1 {
+    text-align: center;
+    color: #008080; /* Dark heading */
+    margin-bottom: 30px;
+    font-size: 2.2em;
+    font-weight: 700;
+}
+
+.highlight-text {
+    color: #ff8c00; 
+    margin-right: 5px;
+}
+
+/* QUESTION AREA */
+.question-area {
+    background-color: #f7ffff; /* Very light background */
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 25px;
+}
+
+#question-text {
+    font-size: 1.3em;
+    color: #333;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+/* ANSWER BUTTONS GRID */
+.answer-buttons {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background-color: #fff;
+    color: #008080; /* Dark text for buttons */
+    border: 2px solid #b9f2ff; 
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1em;
+    text-align: left;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); 
+}
+
+/* Button hover state */
+.btn:hover:not([disabled]) {
+    background-color: #e0ffff; /* Lightest on hover */
+    border-color: #008080;
+    transform: translateY(-2px); 
+}
+
+.btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+
+/* Answer Styling */
+.btn.correct {
+    background-color: #28a745; 
+    border-color: #1e7e34;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 0 10px #28a74580; 
+}
+
+.btn.incorrect {
+    background-color: #dc3545; 
+    border-color: #bd2130;
+    color: white;
+    font-weight: bold;
+}
+
+/* CONTROLS (Next button and Counter) */
+.controls-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+#progress-text {
+    color: #6c757d;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+/* MAIN ACTION BUTTONS */
+.main-btn {
+    background-color: #ff8c00; 
+    color: white; 
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.main-btn:hover:not([disabled]) {
+    background-color: #e67e00;
+}
+
+.main-btn:disabled {
+    background-color: #cccccc;
+    color: #999999;
+    cursor: not-allowed;
+}
+
+
+/* RESULT AREA */
+.result-area {
+    text-align: center;
+    padding: 30px 10px;
+}
+
+.result-area h2 {
+    color: #008080; 
+    margin-bottom: 15px;
+    font-size: 2em;
+}
+
+#final-score {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #28a745; 
+    margin-bottom: 30px;
+}
+
+/* Utility Class */
+.hidden {
+    display: none !important;
+}
